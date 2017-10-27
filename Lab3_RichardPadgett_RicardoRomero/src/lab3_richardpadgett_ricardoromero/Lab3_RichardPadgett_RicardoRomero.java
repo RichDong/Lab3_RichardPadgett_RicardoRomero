@@ -7,7 +7,13 @@ public class Lab3_RichardPadgett_RicardoRomero {
     static Scanner sc = new Scanner(System.in);
     
     public static void main(String[] args) {
+        metodomenu();
+    }
+    
+    public static void metodomenu() {
+        
         int op1 = 0;
+        int op2 = 0;
         while (op1 <= 5) {
             System.out.println("------Super Mercado------");
             System.out.println("1.Iniciar Sesion Clientes");
@@ -22,9 +28,29 @@ public class Lab3_RichardPadgett_RicardoRomero {
                 String us = sc.next();
                 System.out.println("ingrese su contra su password");
                 String pass = sc.next();
-                if (us == "Sociodelaempresa13"&&pass == "XRL8") {
+                if (us == "Sociodelaempresa13" && pass == "XRL8") {
+                    
                     System.out.println("--Bienvenido--");
-                    System.out.println("");
+                    System.out.println("1.Crear Locales");
+                    System.out.println("2.Administrar locales");
+                    System.out.println("3.Crear Empleados");
+                    op2 = sc.nextInt();
+                    if (op2 == 1) {
+                        
+                    } else if (op2 == 2) {
+                        
+                    } else if (op2 == 3) {
+                        System.out.println("ingrese el nombre de usuario del Empleado");
+                        String nom = sc.next();
+                        System.out.println("ingrese la contrasena del empleado");
+                        String contra = sc.next();
+                        System.out.println("ingrese la ID del empleado");
+                        String id = sc.next();
+                        System.out.println("ingrese la fecha de nacimiento del empleado");
+                        String fechan = sc.next();
+                        System.out.println("ingrese el horario de trabajo del empleado");
+                        
+                    }
                 }
             } else if (op1 == 3) {
                 
@@ -32,5 +58,7 @@ public class Lab3_RichardPadgett_RicardoRomero {
                 
             }
         }
+        
     }
+    
 }
