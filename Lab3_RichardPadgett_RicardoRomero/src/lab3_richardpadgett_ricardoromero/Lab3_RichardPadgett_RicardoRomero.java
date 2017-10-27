@@ -49,6 +49,7 @@ public class Lab3_RichardPadgett_RicardoRomero {
                         System.out.println("ingrese la fecha de nacimiento del empleado");
                         String fechan = sc.next();
                         System.out.println("ingrese el horario de trabajo del empleado");
+                        String horario = sc.next();
                         
                     }
                 }
