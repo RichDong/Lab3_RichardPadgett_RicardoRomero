@@ -8,7 +8,7 @@ public class Lab3_RichardPadgett_RicardoRomero {
         System.out.println("Tiendas");
         System.out.println("1.Comprar");
         System.out.println("2.Administrar");
-
+        
     }
     
 }
