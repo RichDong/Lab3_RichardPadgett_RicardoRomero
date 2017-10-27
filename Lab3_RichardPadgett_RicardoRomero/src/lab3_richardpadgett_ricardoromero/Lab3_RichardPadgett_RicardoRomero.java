@@ -8,12 +8,19 @@ public class Lab3_RichardPadgett_RicardoRomero {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
+        System.out.println("Tiendas");
+        System.out.println("1.Comprar");
+        System.out.println("2.Administrar");
         metodomenu();
     }
 
     public static void metodomenu() {
         ArrayList<Personas> p = new ArrayList();
+
         ArrayList<Productos> pro = new ArrayList();
+
+        ArrayList<Locales> l = new ArrayList();
+
         int op1 = 0;
         int op2 = 0;
         int op3 = 0;
@@ -25,6 +32,7 @@ public class Lab3_RichardPadgett_RicardoRomero {
             op1 = sc.nextInt();
             //menu principal
             if (op1 == 1) {
+
                 System.out.println("ingrese su nombre de usuario");
                 System.out.println("ingrese su contra sena");
 
@@ -34,6 +42,7 @@ public class Lab3_RichardPadgett_RicardoRomero {
                 System.out.println("ingrese su contra su password");
                 String pass = sc.next();
                 if (us == "Sociodelaempresa13" && pass == "XRL8") {
+
                     //menu de socio
                     System.out.println("--Bienvenido--");
                     System.out.println("1.Crear Locales");
@@ -42,6 +51,12 @@ public class Lab3_RichardPadgett_RicardoRomero {
                     System.out.println("4.Crear Productos");
                     op2 = sc.nextInt();
                     if (op2 == 1) {
+
+                        System.out.println("Ingrese nombre del local: ");
+                        String nombre = sc.next();
+                        System.out.println("Ingrese el piso del local: ");
+                        int piso = sc.nextInt();
+                        l.add(new Locales(nombre, piso));
 
                     } else if (op2 == 2) {
 
@@ -64,11 +79,11 @@ public class Lab3_RichardPadgett_RicardoRomero {
 
                     } else if (op2 == 4) {
                         System.out.println("ingrese el precio del producto");
-                        int precio= sc.nextInt();
+                        int precio = sc.nextInt();
                         System.out.println("ingrese una descripcion del producto");
-                        String descrip= sc.next();
+                        String descrip = sc.next();
                         System.out.println("ingrese el descuento del producto");
-                        int descu= sc.nextInt();
+                        int descu = sc.nextInt();
                         System.out.println("ingrese el tipo de producto que quiere crear");
                         System.out.println("1.Ropa");
                         System.out.println("2.Jueguetes");
@@ -80,18 +95,19 @@ public class Lab3_RichardPadgett_RicardoRomero {
                             String sexp = sc.next();
                             pro.add(new Ropa(talla, precio, descrip, talla, descu));
                         } else if (op3 == 2) {
-                            
+
                         } else if (op3 == 3) {
 
                         }
+
                     }
                     //fin del menu de socio
+                } else if (op1 == 3) {
+
+                } else if (op1 == 4) {
+
                 }
-
-            } else if (op1 == 3) {
-
             }
         }
     }
-
 }
