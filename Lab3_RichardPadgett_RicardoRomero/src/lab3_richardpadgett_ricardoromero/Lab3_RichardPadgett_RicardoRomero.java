@@ -16,14 +16,16 @@ public class Lab3_RichardPadgett_RicardoRomero {
 
     public static void metodomenu() {
         int posicion = 0;
-        ArrayList factura = new ArrayList();
-        
+
         ArrayList<Personas> p = new ArrayList();
 
         ArrayList<Productos> pro = new ArrayList();
 
         ArrayList<Locales> l = new ArrayList();
-
+        
+        Clientes cliente = null;
+        int cont = 0;
+        
         int op1 = 0;
         int op2 = 0;
         int op3 = 0;
@@ -48,6 +50,7 @@ public class Lab3_RichardPadgett_RicardoRomero {
                             if (((Clientes) per).getUser().equals(usuario) && ((Clientes) per).getPassw().equals(contra)) {
                                 posicion = r;
                                 es = true;
+                                cliente = (Clientes) per;
                             }
                         }
                         r++;
@@ -61,11 +64,23 @@ public class Lab3_RichardPadgett_RicardoRomero {
                             }
                         }
                         System.out.println(a);
-                        
+
                         System.out.println("Ingrese la Posicion de la Tienda en que desea comprar: ");
                         int posio = sc.nextInt();
                         for (int i = 0; i < l.get(posio).getProd().size(); i++) {
                             System.out.println(l.get(posio).getProd().get(i).toString());
+                            
+                        }
+                        System.out.println("Ingrese la posicion del producto que quiere comprar: ");
+                        int compra = sc.nextInt();
+                        if (cliente != null) {
+                            cliente.getFactura().add(l.get(posio).getProd().get(compra));
+                            cont++;
+                            if (cont % 5 ==0) {
+                                for (int i = 0; i < cliente.getFactura().size(); i++) {
+                                    System.out.println(cliente.getFactura().get(i).toString());
+                                }
+                            }
                         }
                     } else {
                         System.out.println("Usuario o Contraseña Incorrecta");

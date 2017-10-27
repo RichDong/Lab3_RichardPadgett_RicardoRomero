@@ -1,9 +1,12 @@
 
 package lab3_richardpadgett_ricardoromero;
 
+import java.util.ArrayList;
+
 public class Clientes extends Personas{
     String productocomp;
     int dinero;
+    ArrayList <Productos> factura = new ArrayList();
 
     public Clientes() {
     }
@@ -28,6 +31,14 @@ public class Clientes extends Personas{
 
     public void setDinero(int dinero) {
         this.dinero = dinero;
+    }
+
+    public ArrayList<Productos> getFactura() {
+        return factura;
+    }
+
+    public void setFactura(ArrayList<Productos> factura) {
+        this.factura = factura;
     }
 
     public String getUser() {
@@ -76,10 +87,10 @@ public class Clientes extends Personas{
 
     public void setFechan(String fechan) {
         this.fechan = fechan;
-    }    
+    }
 
     @Override
     public String toString() {
-        return "Clientes{" + "productocomp=" + productocomp + ", dinero=" + dinero + '}';
+        return "Clientes{" + "productocomp=" + productocomp + ", dinero=" + dinero + ", factura=" + factura + '}';
     }
 }
