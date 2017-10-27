@@ -59,7 +59,7 @@ public class Lab3_RichardPadgett_RicardoRomero {
                         l.add(new Locales(nombre, piso));
 
                     } else if (op2 == 2) {
-
+                        
                     } else if (op2 == 3) {
                         System.out.println("ingrese el nombre de usuario del Empleado");
                         String nom = sc.next();
@@ -95,7 +95,7 @@ public class Lab3_RichardPadgett_RicardoRomero {
                             String sexp = sc.next();
                             pro.add(new Ropa(talla, precio, descrip, talla, descu));
                         } else if (op3 == 2) {
-
+                            
                         } else if (op3 == 3) {
 
                         }
