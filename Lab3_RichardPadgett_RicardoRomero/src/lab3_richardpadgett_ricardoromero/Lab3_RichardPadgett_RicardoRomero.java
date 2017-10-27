@@ -16,7 +16,8 @@ public class Lab3_RichardPadgett_RicardoRomero {
 
     public static void metodomenu() {
         int posicion = 0;
-
+        ArrayList factura = new ArrayList();
+        
         ArrayList<Personas> p = new ArrayList();
 
         ArrayList<Productos> pro = new ArrayList();
@@ -53,7 +54,19 @@ public class Lab3_RichardPadgett_RicardoRomero {
                     }
                     if (es) {
                         System.out.println("°°°°°°BIENVENIDO°°°°°°");
-
+                        String a = "";
+                        for (Locales t : l) {
+                            if (t instanceof Tiendas) {
+                                a += l.indexOf(t) + "" + "-" + t + "\n";
+                            }
+                        }
+                        System.out.println(a);
+                        
+                        System.out.println("Ingrese la Posicion de la Tienda en que desea comprar: ");
+                        int posio = sc.nextInt();
+                        for (int i = 0; i < l.get(posio).getProd().size(); i++) {
+                            System.out.println(l.get(posio).getProd().get(i).toString());
+                        }
                     } else {
                         System.out.println("Usuario o Contraseña Incorrecta");
                     }
@@ -64,7 +77,7 @@ public class Lab3_RichardPadgett_RicardoRomero {
                 String us = sc.next();
                 System.out.println("ingrese su contra su password");
                 String pass = sc.next();
-                if (us == "Sociodelaempresa13" && pass == "XRL8") {
+                if (("Sociodelaempresa13".equals(us)) && ("XRL8".equals(pass))) {
 
                     //menu de socio
                     System.out.println("--Bienvenido--");
@@ -224,7 +237,7 @@ public class Lab3_RichardPadgett_RicardoRomero {
                 } else if (op2 == 8) {
                     System.out.println("Ingrese la Posicion a eliminar: ");
                     int pos = sc.nextInt();
-                    if (p.get(pos)instanceof Empleados) {
+                    if (p.get(pos) instanceof Empleados) {
                         p.remove(pos);
                     }
                 } else if (op2 == 9) {
