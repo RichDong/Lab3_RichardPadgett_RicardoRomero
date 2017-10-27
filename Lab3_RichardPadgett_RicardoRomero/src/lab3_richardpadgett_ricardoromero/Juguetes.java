@@ -9,10 +9,9 @@ package lab3_richardpadgett_ricardoromero;
  *
  * @author ricky
  */
-public class Quioscos extends Locales{
+public class Juguetes extends Productos{
 
-    public Quioscos() {
+    public Juguetes() {
         super();
     }
-   
 }
