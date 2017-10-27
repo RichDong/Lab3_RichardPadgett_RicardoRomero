@@ -82,6 +82,8 @@ public class Lab3_RichardPadgett_RicardoRomero {
                         int precio = sc.nextInt();
                         System.out.println("ingrese una descripcion del producto");
                         String descrip = sc.next();
+                        System.out.println("ingrese la marca del producto");
+                        String marca = sc.next();
                         System.out.println("ingrese el descuento del producto");
                         int descu = sc.nextInt();
                         System.out.println("ingrese el tipo de producto que quiere crear");
@@ -93,8 +95,13 @@ public class Lab3_RichardPadgett_RicardoRomero {
                             String talla = sc.next();
                             System.out.println("ingrese si es de hombre o mujer");
                             String sexp = sc.next();
-                            pro.add(new Ropa(talla, precio, descrip, talla, descu));
+                            pro.add(new Ropa(talla, precio, descrip, marca, descu));
                         } else if (op3 == 2) {
+
+                            System.out.println("ingrese que tipo de juguete quiere crear");
+                            System.out.println("1.Rompecabezas");
+                            System.out.println("2.carro");
+                            System.out.println("3.otro");
                             
                         } else if (op3 == 3) {
 
