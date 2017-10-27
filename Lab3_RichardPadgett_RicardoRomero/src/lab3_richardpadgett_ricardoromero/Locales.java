@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Locales {
    String nombre;
    int piso;
-   
+   ArrayList<Productos> prod = new ArrayList();
 
     public Locales() {
     }
@@ -32,11 +32,16 @@ public class Locales {
         this.piso = piso;
     }
 
-  
+    public ArrayList<Productos> getProd() {
+        return prod;
+    }
+
+    public void setProd(ArrayList<Productos> prod) {
+        this.prod = prod;
+    }
 
     @Override
     public String toString() {
-        return "Locales{" + "nombre=" + nombre + ", piso=" + piso + '}';
+        return "Locales{" + "nombre=" + nombre + ", piso=" + piso + ", prod=" + prod + '}';
     }
-   
 }

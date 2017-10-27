@@ -18,7 +18,7 @@ public class Tiendas extends Locales{
 
     public Tiendas(int tamaño, String nombre, int piso) {
         super(nombre, piso);
-        this.tamaño = tamaño;
+        setTamaño(tamaño);
     }
 
     public int getTamaño() {
@@ -27,6 +27,9 @@ public class Tiendas extends Locales{
 
     public void setTamaño(int tamaño) {
         this.tamaño = tamaño;
+        if (tamaño < 18) {
+            this.tamaño = tamaño;
+        }
     }
 
     @Override

@@ -10,8 +10,29 @@ package lab3_richardpadgett_ricardoromero;
  * @author ricky
  */
 public class Juguetes extends Productos{
-
+    private String juguete;
+    
     public Juguetes() {
         super();
     }
+
+    public Juguetes(String juguete, int precio, String descripcion, String marca, int descuento) {
+        super(precio, descripcion, marca, descuento);
+        this.juguete = juguete;
+    }
+
+    public String getJuguete() {
+        return juguete;
+    }
+
+    public void setJuguete(String juguete) {
+        this.juguete = juguete;
+    }
+
+    @Override
+    public String toString() {
+        return "Juguetes{" + "juguete=" + juguete + '}';
+    }
+
+    
 }
