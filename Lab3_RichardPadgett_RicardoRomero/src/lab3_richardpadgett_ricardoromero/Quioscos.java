@@ -10,6 +10,9 @@ package lab3_richardpadgett_ricardoromero;
  * @author ricky
  */
 public class Quioscos extends Locales{
-    
-    
+
+    public Quioscos() {
+        super("Sportline",1);
+    }
+   
 }
