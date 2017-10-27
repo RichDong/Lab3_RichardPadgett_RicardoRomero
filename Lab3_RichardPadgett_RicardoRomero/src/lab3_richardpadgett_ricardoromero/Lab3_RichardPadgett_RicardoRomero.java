@@ -15,7 +15,9 @@ public class Lab3_RichardPadgett_RicardoRomero {
     }
 
     public static void metodomenu() {
-        ArrayList<Personas> p = new ArrayList(); 
+        ArrayList<Personas> p = new ArrayList();
+        ArrayList<Locales> l = new ArrayList();
+        
         int op1 = 0;
         int op2 = 0;
         while (op1 <= 5) {
@@ -40,9 +42,14 @@ public class Lab3_RichardPadgett_RicardoRomero {
                     System.out.println("3.Crear Empleados");
                     op2 = sc.nextInt();
                     if (op2 == 1) {
+                        System.out.println("Ingrese nombre del local: ");
+                        String nombre = sc.next();
+                        System.out.println("Ingrese el piso del local: ");
+                        int piso = sc.nextInt();
+                        l.add(new Locales(nombre, piso));
                         
                     } else if (op2 == 2) {
-
+                        
                     } else if (op2 == 3) {
                         System.out.println("ingrese el nombre de usuario del Empleado");
                         String nom = sc.next();
