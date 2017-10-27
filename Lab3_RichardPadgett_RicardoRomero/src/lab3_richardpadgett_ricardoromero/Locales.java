@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Locales {
    String nombre;
    int piso;
-   ArrayList<Personas> p = new ArrayList();
+   
 
     public Locales() {
     }
@@ -32,17 +32,11 @@ public class Locales {
         this.piso = piso;
     }
 
-    public ArrayList<Personas> getP() {
-        return p;
-    }
-
-    public void setP(ArrayList<Personas> p) {
-        this.p = p;
-    }
+  
 
     @Override
     public String toString() {
-        return "Locales{" + "nombre=" + nombre + ", piso=" + piso + ", p=" + p + '}';
+        return "Locales{" + "nombre=" + nombre + ", piso=" + piso + '}';
     }
    
 }
