@@ -1,5 +1,6 @@
 package lab3_richardpadgett_ricardoromero;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Lab3_RichardPadgett_RicardoRomero {
@@ -11,7 +12,7 @@ public class Lab3_RichardPadgett_RicardoRomero {
     }
     
     public static void metodomenu() {
-        
+        ArrayList<Personas> p = new ArrayList(); 
         int op1 = 0;
         int op2 = 0;
         while (op1 <= 5) {
@@ -44,12 +45,17 @@ public class Lab3_RichardPadgett_RicardoRomero {
                         String nom = sc.next();
                         System.out.println("ingrese la contrasena del empleado");
                         String contra = sc.next();
+                        System.out.println("ingrese el correo del empleado");
+                        String em = sc.next();
+                        System.out.println("ingrese el nombre completo del usuario");
+                        String nombrecom = sc.next();
                         System.out.println("ingrese la ID del empleado");
                         String id = sc.next();
                         System.out.println("ingrese la fecha de nacimiento del empleado");
                         String fechan = sc.next();
                         System.out.println("ingrese el horario de trabajo del empleado");
-                        String horario = sc.next();
+                        int horario = sc.nextInt();
+                        p.add(new Empleados(horario, horario, us, pass, em, nombrecom, id, fechan));
                         
                     }
                 }
